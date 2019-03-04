@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".torte.Torta8Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_smede">
+
+    <include
+        android:id="@+id/actionbar_torta8"
+        layout="@layout/actionbar_torta1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+
+    <ImageView
+        android:layout_width="210dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/torta8"
+        android:layout_marginBottom="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/LightGray"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:id="@+id/tvTitleSastojci8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Sastojci:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvSastojci8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A-300 gr milka čokolade ili neke
+druge mliječne, 300 gr čokolade za kuhanje,
+250 gr maslaca
+B-6 jaja, 4 žlice šećera, 3 žlice brašna, 2
+vanilija šećera,"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePostupak8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="Postupak:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPostupak8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sastojke A stavite u zdjelu te zdjelu stavite na paru. Za otopit ovoliku količinu čokolade trebat će
+otprilike 15 minuta.
+Sastojke B pjenasto umutite i dodajte rastopljenu čokoladu i maslac. Izlijte u pleh i stavite peći na
+160 C pola sata. Kad je torta pečena, glazirajte ju čokoladom"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kremasti.Krem25Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_tirk">
+
+    <include
+        android:id="@+id/actionbar_krem25"
+        layout="@layout/actionbar_kremasti" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/kremasti25"
+            android:id="@+id/imagekrem25"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleBiskvit25krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/biskvit"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvBiskvit25krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 bjelanjka, 10 dkg oraha, 10 dkg šećera, 10 dkg glatkog brašna, 7 dkg maslaca, 1 dkg praška za pecivo"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleKrema25_1krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/_1_krema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvKrema25_1krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 žumanjaka, 8 žlica šećera, 1 žlica gustina"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleKrema25_2krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/_2_krema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvKrema25_2krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10 dkg oraha, 10 dkg šećera, 7 dkg maslaca, 0.5 dcl mlijeka"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema25krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvPriprema25krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Odvojiti bjelanjke od žumanjaka. Bjelanjke umutiti sa šećerom. Dodati otopljeni maslac. Lagano umiješati orahe, brašno i prašak za pecivo. Izliti na lim i peći 30 min na 150°. Za prvu kremu pjenasto izmiješati žumanjke, šećer i gustin. Namazati na pečenu koru pa osušiti na pećnici na 150°. Za drugu kremu orahe i šećer preliti vrelim mlijekom. U to umiješati maslac. Namazati na posušenu kremu od žumanjaka. Posipati orasima."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

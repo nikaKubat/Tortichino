@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sitni.Sitni7Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_roze">
+
+    <include
+        android:id="@+id/actionbar_sitni7"
+        layout="@layout/actionbar_sitni" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/sitni7" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleSastojci7sit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/sastojci"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvSastojci7sit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5 dkg maslaca, 22 dkg čokolade za kuhanje, 21 dkg oštrog brašna, ½ žlićice praška za pecivo, 10 dkg šećera, 2 jaja, 1 vanili šećer, 10 dkg šećera u prahu – za valjanje"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema7sit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvPriprema7sit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rastopiti maslac, čokoladu na kockice otopiti u maslacu. U zdjeli umješaj jaja, šećer i vanili šećer, kad se pjenasto umuti dodaj otopljenu čokoladu i na kraju brašno. Posudu prekrij folijom i stavi u hladnjak na 2 – 3 sata. Ohlađeno grabi sa žlicom, oblikuj kuglice te valjaj u šećer u prahu da cijele budu prekrivene šećerom. Stavi u lim za pećenje na koji se stavi papir i peci na 180°c. . 10 minuta."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

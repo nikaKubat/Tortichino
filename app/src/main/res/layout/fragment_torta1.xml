@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_tockice_smede"
+    android:orientation="vertical"
+    tools:context=".torte.Torta1Fragment">
+
+
+    <include
+        android:id="@+id/actionbar_torta1"
+        layout="@layout/actionbar_torta1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/torta1"
+            android:layout_marginBottom="15dp"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/LightGray"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:id="@+id/tvTitleSastojci1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Sastojci:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvSastojci1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6 žumanjaka, 18 dkg šećera, 20 dkg mljevenih bučinih košćica, 5 dkg krušnih mrvica, 1 limun, snjeg od 6 bjelanjaka, marmelada od marelice."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePostupak1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="Postupak:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPostupak1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Žumanjke i šećer pjenasto umutiti, dodati mljevene bućine košćice, krušne mrvce, snjeg, koricu od limuna i malo limunovog soka. Pećeno razrezati i filati marmeladom. Odozgo posipati šećerom u prahu."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

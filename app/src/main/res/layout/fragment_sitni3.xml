@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sitni.Sitni3Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_roze">
+
+    <include
+        android:id="@+id/actionbar_sitni3"
+        layout="@layout/actionbar_sitni" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/sitni3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleSastojci3sit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/sastojci"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvSastojci3sit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50 dkg brašna, 20 dkg šećera, 25 dkg lješnjaka (nasjeckanih), 25 dkg margarina, 1 prašak za pecivo, 1 vanili šećer"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema3sit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvPriprema3sit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Najprije nasjeckamo i popržimo lješnjake, nasjeckamo čokoladu na krupnije kockice zbog mrvljenja prilikom mješanja. Izmješamo sve sastojke redom te smjesu stavimo u frižider na 15 – 20 minuta. Dlanovima oblikujemo kuglice srednje veličine. Potom obložimo pak papirom. Stavimo ih u zagrijanu pećnicu na 180°c. i pećemo 13 minuta."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_tockice_smede"
+        android:orientation="vertical"
+        tools:context=".torte.Torta11Fragment">
+
+        <include
+            android:id="@+id/actionbar_torta11"
+            layout="@layout/actionbar_torta1" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_cardview"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="210dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/torta11" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/LightGray"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/tvTitleSastojci11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Sastojci:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvSastojci11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="175 g meda, 175 ml suncokretovog ulja, 3 jaja,
+2 oguljene i naribane jabuke, 100 g naribane
+mrkve, 100 g naribane cikle, 1 žlica mljevenog
+đumbira, 30 g nasjeckanih oraha, 50
+g grožđica, 50 g nasjeckanih datulja, korica
+1 naranče, 170 g brašna bez glutena, 1 žlica
+sode bikarbone, 1 žlica praška za pecivo, 1
+žlica mljevenog cimeta, ½ žličice naribanog
+muškatnog oraščića, 10 g lanenih sjemenki."
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTitlePostupak11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="Postupak:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvPostupak11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zagrijte pećnicu na 190°c. .namastite i
+pobrašnite lim za pećenje promjera 18 cm.
+Pomiješajte med, suncokretovo ulje i jaja.
+Dodajte jabuke, mrkvu i ciklu. Dobro izmješajte
+i dodajte đumbir, orahe, grožđice, datulje i
+narančinu koricu. Pomiješajte brašno, sodu
+bikarbonu i prašak za pecivo, cimet i muškartni
+oraščić i umiješajte u smijesu. Stavite u lim za
+pećenje i posipajte lanenim sjemenkama. Pecite
+u zagrijanoj pećnici oko 40 minuta."
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>

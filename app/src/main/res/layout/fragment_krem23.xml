@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kremasti.Krem23Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_tirk">
+
+    <include
+        android:id="@+id/actionbar_krem23"
+        layout="@layout/actionbar_kremasti" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/kremasti23"
+            android:id="@+id/imagekrem23"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitle1dio23krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/_1_dio"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv1dio23krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12,5 dkg margarina, 20 dkg šećera u prahu, sok od 1 limuna, 40 dkg mljevnih petit keksa, 1 dcl mlijeka"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema23_1krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPriprema23_1krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Margarin i šećer dobro izmiksati, dodati mljevene kekse, mlijeko i sok od limuna. Sve zajedno dobro izmiješati i staviti u kalup veličine 35x20 cmobložen papirom za pečenje."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitle2dio23krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/_2_dio"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/tv2dio23krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 žlice ulja, 10 dag čokolade za kuhanje"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema23_2krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPriprema23_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rastopiti na kockice izlomljenu čokoladu s uljem na pari i preliti preko prvog dijela. Staviti u hladnjak da se čokolada stisne."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+        android:id="@+id/tvTitle3dio23krem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="@string/_3_dio"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv3dio23krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 dcl vode, 20 dkg šećera, 15 dkg margarina, 25 dkg mlijeka u prahu"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema23_3krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPriprema23_3krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vodu sa šećerom staviti da vrije 7 minuta uz povremeno miješanje. Skloniti s vatre i dodati omekšan margarin, pa miksati 5 minuta. Na kraju postupno umiksati mlijeko u prahu i dobivenom smjesom premazati preko ohlađene čokolade. Vratiti kolač u hladnjak da se dobro ohladi, pa rezati."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

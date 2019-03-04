@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kremasti.Krem24Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_tirk">
+
+    <include
+        android:id="@+id/actionbar_krem24"
+        layout="@layout/actionbar_kremasti" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/kremasti24"
+            android:id="@+id/imagekrem24"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleBeze24krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/beze"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvBeze24krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5 bjelanjaka, 25 dkg šećera, 1 žlica brašna, 1 žlica limunovog soka"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema24_1krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPriprema24_1krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Izmiksati bjelanjke u čvrst snijeg pa postepeno dodati šećer. U sjajan snijeg dodati brašno i žlicu limunovog soka. Smjesu izliti na lim obložen papirom za pečenje. Sušiti na 125° oko sat i 45 min."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleKrema24krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/krema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvKrema24krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 l mlijeka, 5 žumanjaka, 9 žlica šećera, 2 vanilin šećera, 4.5 žlica oštrog brašna, 4.5 žlica gustina, 25 dag maslaca, 15 dag čokolade za kuhanje, 15 dag mljevenih oraha, 1 vrećica cappuccina 15 dag sjeckane čokolade"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema24_2krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPriprema24_2krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Izmiksati žumanjke s šećerima, dodati brašno, gustin i malo hladnog mlijeka. Ukuhati u ostalo mlijeko. Ohladiti i umiješati izrađeni maslac. Podijeliti smjesu na dva jednaka dijela. U jedan dio dodati rastopljenu čokoladu i mljevene orahe, a u drugi cappuccino u prahu i sitno sjeckanu čokoladu. Beze koru prerezati na pola, staviti čokoladnu kremu s orasima, staviti drugu koru i premazati cappuccinom kremom."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleUkras24krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="@string/ukrasavanje"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvUkras24krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="½ l vrhnja za šlag"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

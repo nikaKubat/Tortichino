@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".torte.Torta5Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_smede">
+
+    <include android:id="@+id/actionbar_torta5"
+        layout="@layout/actionbar_torta1" />
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:layout_width="210dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/torta5"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/LightGray"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Sastojci:"
+        android:id="@+id/tvTitleSastojci5"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="6 jaja, 12 žlica šećera, 6 žlica brašna, 6 žlica
+ulja, 100 g čokolade za kuhanje, ½ praška za
+pecivo, 1 l slatkog vrhnja, 0,5 dcl ruma, 250 g
+mlječne čokolade, 150 g čokolade za kuhanje,
+3 dcl mlijeka, 2 žlice kakaa, 3 – 4 žlice ruma"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:id="@+id/tvSastojci5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:text="Postupak:"
+        android:layout_marginTop="15dp"
+        android:id="@+id/tvTitlePostupak5"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Biskvit:"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:id="@+id/tvTitleBiskvit3"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:text="Jaja i šećer umutiti zatim dodati
+ulje, 100 g otopljene čokolade, brašno, kakao i
+prašak za pecivo. Peći na 200°c. u kalupu za
+torte i kada se ispeće prerezati na 2 djela."
+        android:id="@+id/tvBiskvit3"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Fila:"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:id="@+id/tvTitleFila1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:text="500 ml slatkog vrhnja i preostalu čokoladu
+rastopiti i staviti u hadnjak da se stisne.
+Izmiksati ostalo vrhnje sa 3 – 4 žlice ruma i
+umutiti rastopljenu čokoladu."
+        android:id="@+id/tvFila1"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Preljev za koru:"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:id="@+id/tvTitlePreljev1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:text="Mlijeko i rum pomješati i premazati biskvit."
+        android:id="@+id/tvPreljev1"
+        android:textAlignment="center"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SitniFragment"
+    android:orientation="vertical"
+    android:background="@color/darkWhite">
+
+    <include android:id="@+id/action_bar_sitni"
+        layout="@layout/action_bar_sitni" />
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni1" />
+
+            <TextView
+                android:id="@+id/tvSitni1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/sitni1"
+                android:textAlignment="center"
+                android:textColor="@color/Brown"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni2" />
+
+            <TextView
+                android:id="@+id/tvSitni2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni2"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni3" />
+
+            <TextView
+                android:id="@+id/tvSitni3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni3"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni4" />
+
+            <TextView
+                android:id="@+id/tvSitni4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni4"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni5"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni5" />
+
+            <TextView
+                android:id="@+id/tvSitni5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni5"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni6"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni6" />
+
+            <TextView
+                android:id="@+id/tvSitni6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni6"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni7"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni7" />
+
+            <TextView
+                android:id="@+id/tvSitni7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni7"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni8"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni8" />
+
+            <TextView
+                android:id="@+id/tvSitni8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni8"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni9"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni9" />
+
+            <TextView
+                android:id="@+id/tvSitni9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni9"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni10"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni10" />
+
+            <TextView
+                android:id="@+id/tvSitni10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni10"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni11"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni11" />
+
+            <TextView
+                android:id="@+id/tvSitni11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni11"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni12"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni12" />
+
+            <TextView
+                android:id="@+id/tvSitni12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni12"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni13"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni13" />
+
+            <TextView
+                android:id="@+id/tvSitni13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni13"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni14"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni14" />
+
+            <TextView
+                android:id="@+id/tvSitni14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni14"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni15"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni15" />
+
+            <TextView
+                android:id="@+id/tvSitni15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni15"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni16"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni16" />
+
+            <TextView
+                android:id="@+id/tvSitni16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni16"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni17"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni17" />
+
+            <TextView
+                android:id="@+id/tvSitni17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni17"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni18"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni18" />
+
+            <TextView
+                android:id="@+id/tvSitni18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni18"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni19"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni19" />
+
+            <TextView
+                android:id="@+id/tvSitni19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni19"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni20"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni20" />
+
+            <TextView
+                android:id="@+id/tvSitni20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni20"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni21"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni21" />
+
+            <TextView
+                android:id="@+id/tvSitni21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni21"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni22"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni22" />
+
+            <TextView
+                android:id="@+id/tvSitni22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni22"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni23"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni23" />
+
+            <TextView
+                android:id="@+id/tvSitni23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni23"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni24"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni24" />
+
+            <TextView
+                android:id="@+id/tvSitni24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni24"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSitni25"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sitni25" />
+
+            <TextView
+                android:id="@+id/tvSitni25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sitni25"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>
+</ScrollView>

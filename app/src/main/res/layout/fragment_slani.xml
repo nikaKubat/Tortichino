@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SlaniFragment"
+    android:orientation="vertical"
+    android:background="@color/darkWhite">
+
+    <include android:id="@+id/action_bar_slani"
+        layout="@layout/action_bar_slani" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSlani1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/slani1" />
+
+            <TextView
+                android:id="@+id/tvSlani1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/slani1"
+                android:textAlignment="center"
+                android:textColor="@color/Brown"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSlani2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/slani2" />
+
+            <TextView
+                android:id="@+id/tvSlani2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/slani2"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSlani3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/slani3" />
+
+            <TextView
+                android:id="@+id/tvSlani3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/slani3"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSlani4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/slani4" />
+
+            <TextView
+                android:id="@+id/tvSlani4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/slani4"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSlani5"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/slani5" />
+
+            <TextView
+                android:id="@+id/tvSlani5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/slani5"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSlani6"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/slani6" />
+
+            <TextView
+                android:id="@+id/tvSlani6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/slani6"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSlani7"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:src="@drawable/slani7" />
+
+            <TextView
+                android:id="@+id/tvSlani7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/slani7"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/Brown"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+    </ScrollView>

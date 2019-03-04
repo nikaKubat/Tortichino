@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tradicionalni.Trad2Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_crvene">
+
+    <include
+        android:id="@+id/actionbar_trad2"
+        layout="@layout/actionbar_tradicionalni" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/trad2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleSastojci2trad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/sastojci"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvSastojci2trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kore 5 – 600 g brašna, 200 g šećera, 1 prašak za pecivo, 1 vanili šećer, 2 jaja, 2 dcl kiselog vrhnja, 1 žlica masti"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleKrema2trad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/krema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvKrema2trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 l mlijeka, 11 žlica šećera, 6 žlica brašna, 3 žlice kakaa, 0,03 l ruma, 150 g maslaca, 300 g čokolade za kuhanje, 250 g margarina"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TvTitlePriprema2trad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvPriprema2trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zamijesiti tijesto od brašna, šećera, praška za pecivo, vanili šećera, jaja, kiselog vrhnja i masti. Razvaljati 5 kora i peći na 150°c. . Od mljeka, šećera, brašna, kakaa skuhati kremu dodati maslac i rum te nafilati kore. Kad se ohladi staviti glazuru od čokolade za kuhanje i margarina."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kremasti.Krem21Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_tirk">
+
+    <include
+        android:id="@+id/actionbar_krem21"
+        layout="@layout/actionbar_kremasti" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/kremasti21"
+            android:id="@+id/imagekrem21"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleSastojci21krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/sastojci"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvSastojci21krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 vrećica cimeta, 1 vanilin šećer, 1 prašak za pecivo, 2 čaše brašna ( 2dcl), 1 čaša vode, 1 žlica kakaa, 3 žlice džema bilo kojeg okusa"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePreljev21krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/preljev_za_biskvit"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPreljev21krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="200 g bijele čokolade, 50 g margarina, 2 žlice vode, za dekoraciju čokoladne mrvice."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema21krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvPriprema21krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Za tijesto pomiješati sve sastojke, dobro pomiješati kuhačom pa smjesu uliti u veći pleh obložen papirom za pečenje. Peći u pečnici na 180° oko 20 minuta.
+Za preljev rastopiti čokoladu sa margarinom i vodom. Ohlađenu koru rezati manjim okruglim kalupom i svaki kolačić premazati pripremljenim preljevom od bijele čokolade. Odmah posipati čokoladnim mrvicama."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".nepeceni.Nep1Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_zelene">
+
+    <include
+        android:id="@+id/actionbar_nep1"
+        layout="@layout/actionbar_nep" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/nepeceni1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleSastojci1nep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/sastojci"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvSastojci1nep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="½ l mlijeka, 2 pudinga od vanilije,7 žlica šećera, 30 dkg kokosa, 25 dkg margarina, 25 dkg šećera u prahu, cijeli lješnjaci, 200 g čokolade, 3 žlice margarina"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TvTitlePriprema1nep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvPriprema1nep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skuhati puding u ½ l mlijeka. Dodati kokos, dobro promiješati i malo rashladiti. Tada dodati dobro izrađeni margarin sa 25 dkg šećera u prahu, sve dobro rashladiti da se stisne pa raditi kuglice. U svaku kuglicu staviti po jedan lješnak ili badem pa ih uvaljati u šećer ili kokos, rastopiti čokoladu s margarinom i preliti preko kuglica."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

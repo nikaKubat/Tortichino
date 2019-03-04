@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".nepeceni.Nep4Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_zelene">
+
+    <include
+        android:id="@+id/actionbar_nep4"
+        layout="@layout/actionbar_nep" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/nepeceni4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleSmjesa4_1nep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/bijela_smjesa"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvSmjesa4_1nep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15 dkg šećera, 1 dcl vode, 12.5 dkg maslaca, 10 dkg kokosovog brašna, 12.5 dkg mlijeka u prahu"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TvTitlePriprema4_1nep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPriprema4_1nep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skuhati vodu i šećer, dodati maslac rezan na kockice i kuhati još nekoliko minuta. Umiksati kokosovo brašno i mlijeko u prahu. Dobro ohladiti."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleSmjesa4_2nep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/smeda_smjesa"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvSmjesa4_2nep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15 dkg šećera, 1 dcl vode, 12.5 dkg maslaca, 25 dkg petit keksa, 3 žlice kakaa"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TvTitlePriprema4_2nep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPriprema4_2nep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skuhati vodu i šećer, dodati maslac rezan na kockice i kuhati još nekoliko minuta: umiješati mljeveni keks i kakao. Dobro ohladiti."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+               <TextView
+            android:id="@+id/tvTitlePunjenje4nep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/punjenje"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvPunjenje4nep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10-12 suhih smokvi, 10-12 poovica oraha"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TvTitlePriprema4_3nep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPriprema4_3nep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Smokve potopiti u mlaku vodu, ocijediti i puniti orasima. Bijelom smjesom obložiti smokve, staviti u zamrzivač, pa obložiti smeđom smjesom."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/tvTitleDodatno4nep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/dodatno"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvDodatno4nep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10 dkg kokosovog brašna"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TvTitlePriprema4_4nep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPriprema4_4nep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Raditi kuglice, pa ih valjati u kokos. Staviti preko noći u hladnjak da se dobro stisnu. Kuglice prerezati na pola, a zatim polovice još na 3-4 dijela."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

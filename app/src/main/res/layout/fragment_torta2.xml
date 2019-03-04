@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_tockice_smede"
+        android:orientation="vertical"
+        tools:context=".torte.Torta2Fragment">
+
+        <include
+            android:id="@+id/actionbar_torta2"
+            layout="@layout/actionbar_torta1" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_cardview"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="210dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/torta2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/LightGray"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+
+            <TextView
+                android:id="@+id/tvTitleSastojci2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Sastojci:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvSastojci2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2 žlice mljevenog lana, 1 šalica ribane tikvice, 1
+šalica ribane mrkve, ¾ šalice smeđeg šećera,
+¼ šalice kokosovog mlijeka, ½ šalice ulja, ¼
+šalice meda, 1 žličica kardamona ili vanilije, 1
+½ žličice sode biarbone, 1 ½ šalice bademovog
+brašna, 1 šalica zobenih pahuljica ( usitnjenih ),
+½ žličice cimeta"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTitlePostupak2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="Postupak:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvPostupak2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mljeveni lan izmješati sa 2 žličice vode dok
+se nedobije ljepljiva masa. Posebno izmješati
+tikvicu, mrkvu, šećer, kokosovo mlijeko, ulje,
+med i kardamon (ili vaniliju). U drugoj posudi
+izmješati brašno, sodu bikarbonu, pahuljice i
+cimet. Najprije e lan dobro umiješa u „mokre“
+sastojke, te se tada dodaju „suhi“ sastojc. Sve
+se izmješa. Peći na 200 – 250°c. oko 25 – 30
+minuta. Dekoracija po želji ( šlag, glazura…)."
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>

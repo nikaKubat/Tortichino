@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_tockice_tirk"
+    android:orientation="vertical"
+    tools:context=".kremasti.Krem1Fragment">
+
+
+    <include
+        android:id="@+id/actionbar_krem1"
+        layout="@layout/actionbar_kremasti" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_cardview"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true" >
+
+            <ImageView
+                android:id="@+id/imagekrem1"
+                android:layout_width="210dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/kremasti1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/LightGray" />
+
+            <TextView
+                android:id="@+id/tvTitleFila1krem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/fila"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvFila1krem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kuhaj na pari 6 žumanjaka sa 15 dkg šećera i 1 vanili šećer. U ohlađeno dodati 25 dkg putra i 15 dkg šećera u prahu."
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTitleTijesto1krem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/_1_tijesto"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTijesto1krem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Miješaj 7 žumanjaka sa 7 žlica šećera, dodaj 7 žlica mljevenih oraha,4 žlice brašna, malo
+prška za pecivo i snjeg od bjelanjaka. Peci u većoj tepsiji."
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTitleTijesto2krem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/_2_tijesto"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTijesto2krem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Od 6 bjelanjaka izlupati čvrst snjeg, dodati 6 žlica mljevenog šećera, 15 dkg mljevenih oraha, 15 dkg grožđica,4 žlice bršna, 1 vanili šećer, malo praška za pecivo. Peci u tepsiji iste veličine."
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTitlePriprema1krem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/priprema"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvPriprema1krem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="1 tijesto – fila – 2 tijesto – fila – 1 tijesto."
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,155 @@
+<resources>
+    <string name="app_name">Tortichino</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kremasti1">Fina Katarina</string>
+    <string name="kremasti2">Dvobojni kolač od lješnjaka</string>
+    <string name="kremasti3">Napolitana</string>
+    <string name="kremasti4">Havana</string>
+    <string name="kremasti5">Boem kolač</string>
+    <string name="kremasti6">Bijela sreća</string>
+    <string name="kremasti7">Pita od čokolade</string>
+    <string name="kremasti8">Trostruki užitak</string>
+    <string name="kremasti9">Bounty kolač</string>
+    <string name="kremasti10">Lambada</string>
+    <string name="kremasti11">Tiramisu</string>
+    <string name="kremasti12">Šareni kolačić</string>
+    <string name="kremasti13">Narančina brda</string>
+    <string name="kremasti14">Japanska pita</string>
+    <string name="kremasti15">Čoko Loko</string>
+    <string name="kremasti16">Kockice od kokosa</string>
+    <string name="kremasti18">Pita s makom</string>
+    <string name="kremasti17">Kokos kocke</string>
+    <string name="kremasti19">Mačji jezik</string>
+    <string name="kremasti20">Kolač sa kokosom i makom</string>
+    <string name="kremasti21">Cimet kolačići</string>
+    <string name="kremasti22">Jon pita</string>
+    <string name="kremasti24">Cappuccino šnite</string>
+    <string name="kremasti26">Narančine šnite</string>
+    <string name="kremasti25">Kocke od oraha</string>
+    <string name="kremasti27">Rumena rolada</string>
+    <string name="kremasti28">Čoksi</string>
+    <string name="kremasti29">Munchmallow kolač</string>
+    <string name="fila">Fila:</string>
+    <string name="_1_tijesto">1. tijesto:</string>
+    <string name="_2_tijesto">2. tijesto:</string>
+    <string name="priprema">Priprema:</string>
+    <string name="krema">Krema:</string>
+    <string name="sastojci">Sastojci:</string>
+    <string name="biskvit">Biskvit:</string>
+    <string name="preljev_za_biskvit">Preljev za biskvit:</string>
+    <string name="grans">Granš:</string>
+    <string name="postupak">Postupak:</string>
+    <string name="sastojci_za_4_kore">Sastojci za 4 kore:</string>
+    <string name="glazura">Glazura:</string>
+    <string name="nadjev">Nadjev:</string>
+    <string name="zuta_krema">Žuta krema:</string>
+    <string name="bijela_krema">Bijela krema:</string>
+    <string name="ukrasavanje">Ukrašavanje:</string>
+    <string name="fila_mak">Fila mak:</string>
+    <string name="fila_kokos">Fila kokos:</string>
+    <string name="medusloj">Međusloj:</string>
+    <string name="slaganje">Slaganje:</string>
+    <string name="_1_dio">1. dio:</string>
+    <string name="_2_dio">2. dio:</string>
+    <string name="_3_dio">3. dio:</string>
+    <string name="kremasti23">Bijela limun bajadera</string>
+    <string name="beze">Beze:</string>
+    <string name="_1_krema">1. krema:</string>
+    <string name="_2_krema">2. krema:</string>
+    <string name="nepeceni_kolaci">Nepečeni kolači</string>
+    <string name="nepeceni2">Jaffa kuglice</string>
+    <string name="nepeceni1">Čoko-Koko</string>
+    <string name="nepeceni3">Kornfleks šnite</string>
+    <string name="nepeceni4">Kuglice sreće</string>
+    <string name="nepeceni5">Raffaello kuglice</string>
+    <string name="nepeceni6">Ferrero Rocher kuglice</string>
+    <string name="nepeceni8">Šarene loptice</string>
+    <string name="nepeceni7">Loli pops</string>
+    <string name="nepeceni9">Kinder</string>
+    <string name="nepeceni10">Pustinjski poljubac</string>
+    <string name="bijela_smjesa">Bijela smjesa:</string>
+    <string name="smeda_smjesa">Smeđa smjesa:</string>
+    <string name="punjenje">Punjenje:</string>
+    <string name="dodatno">Dodatno:</string>
+    <string name="trad1">Kuglof od sira</string>
+    <string name="trad2">Mađarica</string>
+    <string name="trad3">Kuglof - Crnac</string>
+    <string name="trad4">Rezine s makom</string>
+    <string name="trad6">Orehnjača</string>
+    <string name="trad7">Čupavci</string>
+    <string name="trad8">Mramorni jogurt kolač</string>
+    <string name="trad9">Posipanka od domačih jabuka</string>
+    <string name="trad10">Djedov brk</string>
+    <string name="trad11">Pita od višanja</string>
+    <string name="trad12">Starinska zlevanka</string>
+    <string name="trad13">Pita od jogurta</string>
+    <string name="trad15">Londoneri</string>
+    <string name="trad16">Kosekove oči</string>
+    <string name="trad18">Mramorni</string>
+    <string name="trad19">Medena pita</string>
+    <string name="trad5">Pita od jabuka</string>
+    <string name="trad14">Bazlamača</string>
+    <string name="trad17">Štrudla od šljiva</string>
+    <string name="tijesto">Tijesto:</string>
+    <string name="preljev">Preljev:</string>
+    <string name="posip">Posip:</string>
+    <string name="sitni1">Šape sa bučinim brašnom</string>
+    <string name="sitni2">Bijele prhke mašnice</string>
+    <string name="sitni4">Čajni</string>
+    <string name="sitni3">Čoko krašotice</string>
+    <string name="sitni5">Brze kiflice</string>
+    <string name="sitni6">Gljive</string>
+    <string name="sitni7">Raspukanci</string>
+    <string name="sitni8">Roščići od bučinih koštica</string>
+    <string name="sitni10">Okruglice od jabuka</string>
+    <string name="sitni11">Confleksi</string>
+    <string name="sitni12">Kifli bez jaja</string>
+    <string name="sitni13">Prkači</string>
+    <string name="sitni14">Dizane kiflice</string>
+    <string name="sitni15">Domaći keksi</string>
+    <string name="sitni16">Išleri</string>
+    <string name="sitni17">Kolačići s limunom</string>
+    <string name="sitni19">Vanilin vjenčići</string>
+    <string name="sitni9">Fino i zdravo keksi</string>
+    <string name="sitni20">Crno bijele kifle</string>
+    <string name="sitni21">Salenjaci</string>
+    <string name="sitni22">Krašuljci</string>
+    <string name="sitni23">Školjkice</string>
+    <string name="sitni24">Medenjaci</string>
+    <string name="sitni25">Kiflice od oraha</string>
+    <string name="sitni18">Medeni poljupci</string>
+    <string name="secerni_sirup">Šečerni sirup:</string>
+    <string name="slani1">Bučnica</string>
+    <string name="slani2">Pogačice od sira i grožđica</string>
+    <string name="slani7">Starinski kifli od tikvinih koštica</string>
+    <string name="slani6">Kiflice</string>
+    <string name="slani5">Kukuruzna zlevanka</string>
+    <string name="slani4">Kolač od paradajza</string>
+    <string name="slani3">Gibanica</string>
+    <string name="za_premazivanje">Za premazivanje:</string>
+    <string name="naziv_recepta">naziv recepta</string>
+    <string name="unesite_naziv_recepta">Unesite naziv recepta</string>
+
+
+    <string-array name="backgrounds">
+        <item>Bijela</item>
+        <item>Roza</item>
+        <item>Zelena</item>
+        <item>Tirkizna</item>
+        <item>Narandžasta</item>
+        <item>Crvena</item>
+    </string-array>
+
+    <string-array name="backgroundId">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:icon="@drawable/chef_hat32"
+        android:id="@+id/navigation_home"
+        android:title="Početna" />
+
+
+    <item android:icon="@drawable/bowl32"
+        android:id="@+id/navigation_profile"
+        android:title="Moji recepti" />
+
+
+</menu>

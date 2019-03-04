@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tradicionalni.Trad4Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_crvene">
+
+    <include
+        android:id="@+id/actionbar_trad4"
+        layout="@layout/actionbar_tradicionalni" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/trad4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+
+        <TextView
+            android:id="@+id/tvPriprema4_1trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Umjesite tijesto od 200 g brašna pomiješanog s 1 malom žlicom praška za pecivo, 200 g svježeg sira, malo soli, 150 g margarina, 1 vanili šećerom. Tijesto razvaljajte i posredini ga premažite nadjevom koji ste priredili od: 100 g mljevenog maka, 4 žlice vručeg mlijeka, 100 g šećera, 1 vanili šećer, ribana korica od 1 limuna, 50 g grožđica, 2 – 3 žlice ruma."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/tvPriprema4_2trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="S jedne i druge duže straneizrežite tijesto 2 cm široko, 10 cm dugo od kraja prema sredini. Izrezane vrpce tijesta položite na nadjev i premažite ih razmućenim jajem. Pecite 35 minuta na 225°c. . Pećeno tijesto prelijte preljevom priređenim ukuhavanjem 60 g šećera i ½ dcl vode do guste tekuće mase."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"/>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

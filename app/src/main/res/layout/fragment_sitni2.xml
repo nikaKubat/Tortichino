@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sitni.Sitni2Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_roze">
+
+    <include
+        android:id="@+id/actionbar_sitni2"
+        layout="@layout/actionbar_sitni" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/sitni2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleSastojci2sit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/sastojci"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvSastojci2sit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 kg brašna, masti ili margarina po potrebi (da se masnoća i brašno dobro poveže), po želji dodati šećer – to sve dobro umjesiti s dodavanjem kiselog vrhnja
+– vrlo pomalo dodavati sodu bikarbonu (1 mala žličica), domaći pekmez, šećer u prahu za posipavanje.– P.S. nisam zaboravila prašak za pecivo – cilj je da tijesto odnosno kolačići ostanu bieli."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema2sit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvPriprema2sit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mast ili margarin se dobro utrlja u brašno sve dotle dok se dobro nepovežu uz dodavanje šećera i sode bikarbone ( oprez ako se previše stavi sode bikarbne ili praška za pecivo tijesto puca) sve se dobro zamijesi dodavanjem vrhnja po potrebi. Tijesto se razvalja i režu se kvadratići na koje se stavlja pekmez te se dva suprotna kraja kvadratića spoje i lagano pritisnu prstima. Kad su pećeni (kad su pećeni trebaju ostati bijeli) valjaju se u šećer u prahu."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

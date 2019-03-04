@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".torte.Torta13Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_smede">
+
+    <include
+        android:id="@+id/actionbar_torta13"
+        layout="@layout/actionbar_torta1" />
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:layout_width="210dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/torta13" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/LightGray"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:id="@+id/tvTitleSastojci13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Sastojci:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleBiskvit4_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Biskvit 1:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvBiskvit4_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12 dkg putra, 10 dkg šećera,
+12 dkg omekšane čokolade, 6 žutanjaka,
+6 bjelanjaka (snijeg), 10 dkg neoguljenih
+naribanih badema, 10 dkg brašna"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleBiskvit4_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Biskvit 2:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvBiskvit4_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 žutanjka, 7 dkg šećera, 7 dkg
+naribanih lješnjaka, 1 žlica krušnih mrvica, 1
+mala žlica ruma, 4 bjelajka ( snijeg)"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleKrema13_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Krema:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvKrema13_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 žutanjka, 12 dkg šećera, 10
+dkg omekšane čokolade, 10 dkg naribanih
+lješnjaka, 10 dkg putra"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+
+
+        <TextView
+            android:id="@+id/tvTitlePostupak13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Postupak:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvTitleBiskvit4_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Biskvit 1:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvBiskvit4_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Miješati putar sa šećerom,
+Naizmjence dodavati čokoladu i žutanjke, dodati
+bademe, brašno, izmiješati i umiješati snijeg.
+Peći na 180°, ohlađeno prerezati na dva dijela."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleBiskvit4_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Biskvit 2:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvBiskvit4_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Žutanjke umutiti sa špećerom, dodati
+lješnjake, krušne mrvice, rum i umiješati snijeg.
+Peći na 180°, ohlađeno staviti između dva dijela
+prvog biskvita."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleKrema13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Krema:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvKrema13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Na pari kuhati žutanjke sa šećerom
+dok ne postane gusto, dodati čokoladu i
+lješnjake, ohladiti i umiješati putar. Kremom
+premazati listove i tortu izvana te pospati
+naribanim lješnjacima."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+    <style name="CostumActionbarStyle" parent="Theme.AppCompat.Light.NoActionBar" >
+    </style>
+
+    <style name="CostumPopupStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@drawable/actionbar</item>
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">-4dp</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+    <item name="fontFamily">@fonts/CandyRoundBTN-4.ttf</item>
+    </style>
+
+
+</resources>

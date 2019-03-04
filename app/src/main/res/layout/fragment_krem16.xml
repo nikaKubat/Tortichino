@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kremasti.Krem16Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_tirk">
+
+    <include
+        android:id="@+id/actionbar_krem16"
+        layout="@layout/actionbar_kremasti" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/kremasti16"
+            android:id="@+id/imagekrem16"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleBiskvit16krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/biskvit"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvBiskvit16krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 jaja, 12 žlica šećera, 1 dcl ulja, 1 dcl mlijeka, 12 žlica brašna, 1 prašak za pecivo"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleKrema16krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/krema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvKrema16krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="½ l mlijeka skuhati sa 10 žlica šećera, 3 žlice brašna, 10 dkg kokosa"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema16krem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvPriprema16krem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sve nabrojene sastojke izmiksati te pola smjese uliti u tepsiju i staviti da se peće do pola a za to vrijeme skuhati kremu. Preliti na zapećeni biskvit i na to staviti drugi dio smjese. Peći još 20 – 25 minuta. Izvaditi iz pećnice i preliti čokoladnom glazurom."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

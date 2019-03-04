@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tradicionalni.Trad16Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_crvene">
+
+    <include
+        android:id="@+id/actionbar_trad16"
+        layout="@layout/actionbar_tradicionalni" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/trad16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleSastojci16trad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/sastojci"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvSastojci16trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3 cijela jaja, 5 velikih žlica šećera, 2 dcl vrhnja, 2 dcl ulja, 2 dcl mlijeka, 40 dkg svježeg kravljeg sira, 5 velikih žlica kukuruznog griza, 1 puding od vanilije, 20 dkg aronije"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/tvTitlePriprema16trad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvPriprema16trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mikserom pomiješati jaja, šećer, ulje, vrhnje, mlijeko, sir te dodati prah pudinga i griza. Smjesu ostaviti da odstoji sat vremena, a može i preko noći u hladnjaku. Gustu masu ulijevati u protvanj 20x30 cm, premazan uljem i posipan brašnom. Nakon ulijevanja po masi posložiti aroniju i peći na 180° , 45 min. Ohlađen posipati šećerom u prahu."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tradicionalni.Trad6Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_crvene">
+
+    <include
+        android:id="@+id/actionbar_trad6"
+        layout="@layout/actionbar_tradicionalni" />
+
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/trad6" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleBiskvit6trad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/biskvit"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvBiskvit6trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30 dkg brašna, 15 dkg maslaca ili margarina, 3 dkg šećera, malo soli, 1 jaje, 2 velike žlice mlijeka, 1 kocka ( žličica) šećera, 1 i pola dkg germe"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleNadjev6trad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/nadjev"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvNadjev6trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30 dkg oraha, 2 jaja, 15 dkg šećera, kora od ½ limuna, 3 velike žlice grožđica, 2 velike žlice ruma, 2 velike žlice pekmeza od marelice"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema6trad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvPriprema6trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kvasac rastopite u mlijeku sa šećerom i ostavite da se diže. Na dasku stavite brašno i margarin kojeg utrljate u brašno, dodati šećer, sol, jaje, germu. Brzo zamjesite tijesto i ostavite na hladno mjesto. Za to vrijeme načinite nadjev. Tijesto razvaljajte u 3 kore, namažite nadjevom i zarolajte. Stavite ih u namazan i brašnom posuti pleh. Tijesto namažite jajetom i pecite na 150°c. dok nebude lijepo rumeno. Režite drugi dan.
+Napomena: nadjev može biti od oraha, maka i rogača."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

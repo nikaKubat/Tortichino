@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tradicionalni.Trad10Fragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_tockice_crvene">
+
+    <include
+        android:id="@+id/actionbar_trad10"
+        layout="@layout/actionbar_tradicionalni" />
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_cardview"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/trad10" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightGray" />
+
+        <TextView
+            android:id="@+id/tvTitleBiskvit10trad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/biskvit"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvBiskvit10trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="45 dkg brašna (oštro), 25 dkg maslaca ili margarina, 5 žlica šećera, 1 prašak za pecivo, 1 vanili šećer, 4 žumanjka, mlijeka po potrebi da zamjesiš"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitleFila10trad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/fila"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvFila10trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 bjelanjka, 15 dkg šećera, 15 dkg oraha ili lješnjaka, višanja po potrebi, ---- istuci bjelanjke u čvrst snijeg zatim stavi orahe i šećer"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePriprema10trad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/priprema"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvPriprema10trad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stavi sve sastojke i sa toplim mlijekom zamijesi tijesto, ne pretvrdo ne premekano, razdjeli u 6 hrpica svakiu posebno premjesi i stavi malo u frižider. Svaku hrpicu razvaljaj na tanko i namaži sa pekmezom. Svaki kraj savij unutra tako da unutra ostane mjesta za filu. Dole stavi malo file pa na filu nasjeckane višnje pa opet gore filu. Peci pola sata na 180°c. ."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

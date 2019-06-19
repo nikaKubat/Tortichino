@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,39 +15,26 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import hr.algebra.tortichino.tradicionalni.Trad10Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad11Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad12Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad13Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad14Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad15Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad16Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad17Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad18Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad19Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad1Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad2Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad3Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad4Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad5Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad6Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad7Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad8Fragment;
-import hr.algebra.tortichino.tradicionalni.Trad9Fragment;
+import java.util.ArrayList;
+
+import hr.algebra.tortichino.kremasti.ItemAdapter;
+import hr.algebra.tortichino.kremasti.ItemDetails;
+import hr.algebra.tortichino.kremasti.ItemKremastiFragment;
+import hr.algebra.tortichino.kremasti.ItemModel;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TradicionalniFragment extends Fragment {
+public class TradicionalniFragment extends Fragment implements ItemAdapter.OnItemListener {
 
     private Toolbar toolbar;
     private TextView tvTitle;
     private ImageView back;
-    private TextView tvTrad1, tvTrad2, tvTrad3, tvTrad4, tvTrad5, tvTrad6, tvTrad7, tvTrad8, tvTrad9, tvTrad10;
-    private TextView tvTrad11, tvTrad12, tvTrad13, tvTrad14, tvTrad15, tvTrad16, tvTrad17, tvTrad18, tvTrad19;
-    private CardView cvTrad1, cvTrad2, cvTrad3, cvTrad4, cvTrad5, cvTrad6, cvTrad7, cvTrad8, cvTrad9, cvTrad10;
-    private CardView cvTrad11, cvTrad12, cvTrad13, cvTrad14, cvTrad15, cvTrad16, cvTrad17, cvTrad18, cvTrad19;
+    private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager layoutManager;
+    private RecyclerView.Adapter adapter;
+    private ArrayList<ItemDetails> detailList;
 
     public TradicionalniFragment() {
         // Required empty public constructor
@@ -59,72 +47,121 @@ public class TradicionalniFragment extends Fragment {
         // Inflate the layout for this fragment
         final View tradFragment = inflater.inflate(R.layout.fragment_tradicionalni, container, false);
 
+        ArrayList<ItemModel> tradList = new ArrayList<>();
+        tradList.add(new ItemModel(R.drawable.trad1, getString(R.string.trad1)));
+        tradList.add(new ItemModel(R.drawable.trad2, getString(R.string.trad2)));
+        tradList.add(new ItemModel(R.drawable.trad3, getString(R.string.trad3)));
+        tradList.add(new ItemModel(R.drawable.trad4, getString(R.string.trad4)));
+        tradList.add(new ItemModel(R.drawable.trad5, getString(R.string.trad5)));
+        tradList.add(new ItemModel(R.drawable.trad6, getString(R.string.trad6)));
+        tradList.add(new ItemModel(R.drawable.trad7, getString(R.string.trad7)));
+        tradList.add(new ItemModel(R.drawable.trad8, getString(R.string.trad8)));
+        tradList.add(new ItemModel(R.drawable.trad9, getString(R.string.trad9)));
+        tradList.add(new ItemModel(R.drawable.trad10, getString(R.string.trad10)));
+        tradList.add(new ItemModel(R.drawable.trad11, getString(R.string.trad11)));
+        tradList.add(new ItemModel(R.drawable.trad12, getString(R.string.trad12)));
+        tradList.add(new ItemModel(R.drawable.trad13, getString(R.string.trad13)));
+        tradList.add(new ItemModel(R.drawable.trad14, getString(R.string.trad14)));
+        tradList.add(new ItemModel(R.drawable.trad15, getString(R.string.trad15)));
+        tradList.add(new ItemModel(R.drawable.trad16, getString(R.string.trad16)));
+        tradList.add(new ItemModel(R.drawable.trad17, getString(R.string.trad17)));
+        tradList.add(new ItemModel(R.drawable.trad18, getString(R.string.trad18)));
+        tradList.add(new ItemModel(R.drawable.trad19, getString(R.string.trad19)));
+
+        detailList = new ArrayList<>();
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.fila) + "\n" +
+                getString(R.string.trad1_desc1) + "\n" + getString(R.string.tijesto) + "\n" +
+                getString(R.string.trad1_desc2) + "\n" + getString(R.string.glazura) + "\n" +
+                getString(R.string.trad1_desc3),
+                getString(R.string.priprema), getString(R.string.trad1_desc4), R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.trad2_desc1) + "\n" +
+                getString(R.string.krema) + "\n" +
+                getString(R.string.trad2_desc2), getString(R.string.priprema), getString(R.string.trad2_desc3), R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) + "\n" +
+                getString(R.string.trad3_desc1) + "\n" + getString(R.string.preljev) + "\n" +
+                getString(R.string.trad3_desc2), getString(R.string.priprema), getString(R.string.trad3_desc3),
+                R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.priprema), getString(R.string.trad4_desc1),
+                null, getString(R.string.trad4_desc2), R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) + "\n" +
+                getString(R.string.trad5_desc1) + "\n" + getString(R.string.fila) + "\n" +
+                getString(R.string.trad5_desc2), getString(R.string.priprema), getString(R.string.trad5_desc3),
+                R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) + "\n" +
+                getString(R.string.trad6_desc1) + "\n" + getString(R.string.nadjev) + "\n" +
+                getString(R.string.trad6_desc2), getString(R.string.priprema), getString(R.string.trad6_desc3),
+                R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) + "\n" +
+                getString(R.string.trad7_desc1) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.trad7_desc2), getString(R.string.priprema), getString(R.string.biskvit) + "\n" +
+                getString(R.string.trad7_desc3) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.trad7_desc4), R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.trad8_desc1),
+                getString(R.string.priprema), getString(R.string.trad8_desc2),
+                R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) + "\n" +
+                getString(R.string.trad9_desc1) + "\n" + getString(R.string.fila) + "\n" +
+                getString(R.string.trad9_desc2) + "\n" + getString(R.string.posip) + "\n" +
+                getString(R.string.trad9_desc3), getString(R.string.priprema), getString(R.string.trad9_desc4),
+                R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) + "\n" +
+                getString(R.string.trad10_desc1) + "\n" + getString(R.string.fila) + "\n" +
+                getString(R.string.trad10_desc2), getString(R.string.priprema), getString(R.string.trad10_desc3),
+                R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.tijesto) + "\n" +
+                getString(R.string.trad11_desc1) + "\n" + getString(R.string.biskvit) + "\n" +
+                getString(R.string.trad11_desc2) + "\n" + getString(R.string.preljev) + "\n" +
+                getString(R.string.trad11_desc3), getString(R.string.priprema), getString(R.string.trad11_desc4),
+                R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.trad12_desc1),
+                getString(R.string.priprema), getString(R.string.trad12_desc2),
+                R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) + "\n" +
+                getString(R.string.trad13_desc1) + "\n" + getString(R.string.fila) + "\n" +
+                getString(R.string.trad13_desc2), getString(R.string.priprema), getString(R.string.trad13_desc3),
+                R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.trad14_desc1) ,
+                getString(R.string.priprema), getString(R.string.trad14_desc2),
+                R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.trad15_desc1),
+                getString(R.string.priprema), getString(R.string.trad15_desc2),
+                R.drawable.background_tockice_crvene));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.trad16_desc1),
+                getString(R.string.priprema), getString(R.string.trad16_desc2),
+                R.drawable.background_tockice_crvene));
+
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.trad17_desc1),
+                getString(R.string.priprema), getString(R.string.korak_1) + "\n" + getString(R.string.trad17_desc2) + "\n" +
+                getString(R.string.korak_2) + "\n" + getString(R.string.trad17_desc3) + "\n" +
+                getString(R.string.korak_3) + "\n" + getString(R.string.trad17_desc4) + "\n" +
+                getString(R.string.korak_4) + "\n" + getString(R.string.trad17_desc5),
+                R.drawable.background_tockice_crvene));
+
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.trad18_desc1),
+                getString(R.string.priprema), getString(R.string.trad18_desc2),
+                R.drawable.background_tockice_crvene));
+
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) + "\n" +
+                getString(R.string.trad19_desc1) + "\n" + getString(R.string.fila) + "\n" +
+                getString(R.string.trad19_desc2), getString(R.string.priprema), getString(R.string.trad19_desc3),
+                R.drawable.background_tockice_crvene));
+
+
+
         tvTitle = tradFragment.findViewById(R.id.tvTitleTrad);
-        toolbar = tradFragment.findViewById(R.id.action_bar_trad);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
-        tvTrad1 = tradFragment.findViewById(R.id.tvTradicionalni1);
-        tvTrad2 = tradFragment.findViewById(R.id.tvTradicionalni2);
-        tvTrad3 = tradFragment.findViewById(R.id.tvTradicionalni3);
-        tvTrad4 = tradFragment.findViewById(R.id.tvTradicionalni4);
-        tvTrad5 = tradFragment.findViewById(R.id.tvTradicionalni5);
-        tvTrad6 = tradFragment.findViewById(R.id.tvTradicionalni6);
-        tvTrad7 = tradFragment.findViewById(R.id.tvTradicionalni7);
-        tvTrad8 = tradFragment.findViewById(R.id.tvTradicionalni8);
-        tvTrad9 = tradFragment.findViewById(R.id.tvTradicionalni9);
-        tvTrad10 = tradFragment.findViewById(R.id.tvTradicionalni10);
-        tvTrad11 = tradFragment.findViewById(R.id.tvTradicionalni11);
-        tvTrad12 = tradFragment.findViewById(R.id.tvTradicionalni12);
-        tvTrad13 = tradFragment.findViewById(R.id.tvTradicionalni13);
-        tvTrad14 = tradFragment.findViewById(R.id.tvTradicionalni14);
-        tvTrad15 = tradFragment.findViewById(R.id.tvTradicionalni15);
-        tvTrad16 = tradFragment.findViewById(R.id.tvTradicionalni16);
-        tvTrad17 = tradFragment.findViewById(R.id.tvTradicionalni17);
-        tvTrad18 = tradFragment.findViewById(R.id.tvTradicionalni18);
-        tvTrad19 = tradFragment.findViewById(R.id.tvTradicionalni19);
-
-        cvTrad1 = tradFragment.findViewById(R.id.cvTradicionalni1);
-        cvTrad2 = tradFragment.findViewById(R.id.cvTradicionalni2);
-        cvTrad3 = tradFragment.findViewById(R.id.cvTradicionalni3);
-        cvTrad4 = tradFragment.findViewById(R.id.cvTradicionalni4);
-        cvTrad5 = tradFragment.findViewById(R.id.cvTradicionalni5);
-        cvTrad6 = tradFragment.findViewById(R.id.cvTradicionalni6);
-        cvTrad7 = tradFragment.findViewById(R.id.cvTradicionalni7);
-        cvTrad8 = tradFragment.findViewById(R.id.cvTradicionalni8);
-        cvTrad9 = tradFragment.findViewById(R.id.cvTradicionalni9);
-        cvTrad10 = tradFragment.findViewById(R.id.cvTradicionalni10);
-        cvTrad11 = tradFragment.findViewById(R.id.cvTradicionalni11);
-        cvTrad12 = tradFragment.findViewById(R.id.cvTradicionalni12);
-        cvTrad13 = tradFragment.findViewById(R.id.cvTradicionalni13);
-        cvTrad14 = tradFragment.findViewById(R.id.cvTradicionalni14);
-        cvTrad15 = tradFragment.findViewById(R.id.cvTradicionalni15);
-        cvTrad16 = tradFragment.findViewById(R.id.cvTradicionalni16);
-        cvTrad17 = tradFragment.findViewById(R.id.cvTradicionalni17);
-        cvTrad18 = tradFragment.findViewById(R.id.cvTradicionalni18);
-        cvTrad19 = tradFragment.findViewById(R.id.cvTradicionalni19);
-
-
-
         Typeface title = Typeface.createFromAsset(getActivity().getAssets(), "fonts/CandyRoundBTN-4.ttf");
         tvTitle.setTypeface(title);
-        tvTrad1.setTypeface(title);
-        tvTrad2.setTypeface(title);
-        tvTrad3.setTypeface(title);
-        tvTrad4.setTypeface(title);
-        tvTrad5.setTypeface(title);
-        tvTrad6.setTypeface(title);
-        tvTrad7.setTypeface(title);
-        tvTrad8.setTypeface(title);
-        tvTrad9.setTypeface(title);
-        tvTrad10.setTypeface(title);
-        tvTrad11.setTypeface(title);
-        tvTrad12.setTypeface(title);
-        tvTrad13.setTypeface(title);
-        tvTrad14.setTypeface(title);
-        tvTrad15.setTypeface(title);
-        tvTrad16.setTypeface(title);
-        tvTrad17.setTypeface(title);
-        tvTrad18.setTypeface(title);
-        tvTrad19.setTypeface(title);
+
+        toolbar = tradFragment.findViewById(R.id.action_bar_trad);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+
+        recyclerView = tradFragment.findViewById(R.id.rvTrad);
+        recyclerView.setHasFixedSize(true);
+        adapter = new ItemAdapter(tradList, this);
+        layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+
 
         back = tradFragment.findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
@@ -137,198 +174,28 @@ public class TradicionalniFragment extends Fragment {
             }
         });
 
-        cvTrad1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad1Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad2Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad3Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad4Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad5Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad6Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad7Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad8Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad9Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad10Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad11Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad12.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad12Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad13.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad13Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad14.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad14Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad15.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad15Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad16.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad16Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad17.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad17Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad18.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad18Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvTrad19.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Trad19Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
 
         return tradFragment;
     }
 
+    @Override
+    public void onItemClick(int adapterPosition, String title, int image) {
+        ItemKremastiFragment itemDetailFragment = new ItemKremastiFragment();
+        ItemDetails itemDetails = this.detailList.get(adapterPosition);
+
+        Bundle bundle = new Bundle();
+        bundle.putString("TITLE_KEY", title);
+        bundle.putInt("IMAGE_KEY", image);
+        bundle.putString("TITLE_1", itemDetails.getTitle1());
+        bundle.putString("DESC_1", itemDetails.getDesc1());
+        bundle.putString("TITLE_2", itemDetails.getTitle2());
+        bundle.putString("DESC_2", itemDetails.getDesc2());
+        bundle.putInt("BACKGROUND_KEY", itemDetails.getBackground());
+        itemDetailFragment.setArguments(bundle);
+
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, itemDetailFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
 }

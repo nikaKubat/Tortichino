@@ -6,58 +6,37 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import hr.algebra.tortichino.kremasti.Krem10Fragment;
-import hr.algebra.tortichino.kremasti.Krem11Fragment;
-import hr.algebra.tortichino.kremasti.Krem12Fragment;
-import hr.algebra.tortichino.kremasti.Krem13Fragment;
-import hr.algebra.tortichino.kremasti.Krem14Fragment;
-import hr.algebra.tortichino.kremasti.Krem15Fragment;
-import hr.algebra.tortichino.kremasti.Krem16Fragment;
-import hr.algebra.tortichino.kremasti.Krem17Fragment;
-import hr.algebra.tortichino.kremasti.Krem18Fragment;
-import hr.algebra.tortichino.kremasti.Krem19Fragment;
-import hr.algebra.tortichino.kremasti.Krem1Fragment;
-import hr.algebra.tortichino.kremasti.Krem20Fragment;
-import hr.algebra.tortichino.kremasti.Krem21Fragment;
-import hr.algebra.tortichino.kremasti.Krem22Fragment;
-import hr.algebra.tortichino.kremasti.Krem23Fragment;
-import hr.algebra.tortichino.kremasti.Krem24Fragment;
-import hr.algebra.tortichino.kremasti.Krem25Fragment;
-import hr.algebra.tortichino.kremasti.Krem26Fragment;
-import hr.algebra.tortichino.kremasti.Krem27Fragment;
-import hr.algebra.tortichino.kremasti.Krem28Fragment;
-import hr.algebra.tortichino.kremasti.Krem29Fragment;
-import hr.algebra.tortichino.kremasti.Krem2Fragment;
-import hr.algebra.tortichino.kremasti.Krem3Fragment;
-import hr.algebra.tortichino.kremasti.Krem4Fragment;
-import hr.algebra.tortichino.kremasti.Krem5Fragment;
-import hr.algebra.tortichino.kremasti.Krem6Fragment;
-import hr.algebra.tortichino.kremasti.Krem8Fragment;
-import hr.algebra.tortichino.kremasti.Krem9Fragment;
+import java.util.ArrayList;
 
+import hr.algebra.tortichino.kremasti.ItemAdapter;
+import hr.algebra.tortichino.kremasti.ItemDetails;
+import hr.algebra.tortichino.kremasti.ItemKremastiFragment;
+import hr.algebra.tortichino.kremasti.ItemModel;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class KremastiFragment extends Fragment {
+public class KremastiFragment extends Fragment implements ItemAdapter.OnItemListener{
 
+    private static final String TAG = "KremastiFragment";
     private Toolbar toolbar;
-    private TextView tvTitle, tvKrem1, tvKrem2, tvKrem3, tvKrem4, tvKrem5, tvKrem6, tvKrem8, tvKrem9, tvKrem10;
-    private TextView tvKrem11, tvKrem12, tvKrem13, tvKrem14, tvKrem15, tvKrem16, tvKrem17, tvKrem18, tvKrem19, tvKrem20;
-    private TextView tvKrem21, tvKrem22, tvKrem23, tvKrem24, tvKrem25, tvKrem26, tvKrem27, tvKrem28, tvKrem29;
-    private CardView cvKrem1, cvKrem2, cvKrem3, cvKrem4, cvKrem5, cvKrem6, cvKrem8, cvKrem9, cvKrem10;
-    private CardView cvKrem11, cvKrem12, cvKrem13, cvKrem14, cvKrem15, cvKrem16, cvKrem17, cvKrem18, cvKrem19, cvKrem20;
-    private CardView cvKrem21, cvKrem22, cvKrem23, cvKrem24, cvKrem25, cvKrem26, cvKrem27, cvKrem28, cvKrem29;
+    private TextView tvTitle;
     private ImageView back;
-
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+    ArrayList<ItemModel> kremastiList;
+    ArrayList<ItemDetails> detailList;
 
     public KremastiFragment() {
         // Required empty public constructor
@@ -70,385 +49,177 @@ public class KremastiFragment extends Fragment {
         // Inflate the layout for this fragment
         View kremastiFragment = inflater.inflate(R.layout.fragment_kremasti, container, false);
 
+        kremastiList = new ArrayList<>();
+        kremastiList.add(new ItemModel(R.drawable.kremasti1, getString(R.string.kremasti1)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti2, getString(R.string.kremasti2)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti3, getString(R.string.kremasti3)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti4, getString(R.string.kremasti4)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti5, getString(R.string.kremasti5)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti6, getString(R.string.kremasti6)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti8, getString(R.string.kremasti8)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti9, getString(R.string.kremasti9)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti10, getString(R.string.kremasti10)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti11, getString(R.string.kremasti11)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti12, getString(R.string.kremasti12)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti13, getString(R.string.kremasti13)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti14, getString(R.string.kremasti14)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti15, getString(R.string.kremasti15)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti16, getString(R.string.kremasti16)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti17, getString(R.string.kremasti17)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti18, getString(R.string.kremasti18)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti19, getString(R.string.kremasti19)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti20, getString(R.string.kremasti20)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti21, getString(R.string.kremasti21)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti22, getString(R.string.kremasti22)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti23, getString(R.string.kremasti23)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti24, getString(R.string.kremasti24)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti25, getString(R.string.kremasti25)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti26, getString(R.string.kremasti26)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti27, getString(R.string.kremasti27)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti28, getString(R.string.kremasti28)));
+        kremastiList.add(new ItemModel(R.drawable.kremasti29, getString(R.string.kremasti29)));
+
+        detailList = new ArrayList<>();
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.fila) +"\n"
+        + getString(R.string.krem1_desc1) + "\n" + getString(R.string._1_tijesto) + "\n" +
+                getString(R.string.krem1_desc2) + "\n" + getString(R.string._2_tijesto) + "\n" +
+                getString(R.string.krem1_desc3), getString(R.string.priprema), getString(R.string.krem1_desc4), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string._1_tijesto) +"\n"
+                + getString(R.string.krem2_desc1) + "\n" + getString(R.string._2_tijesto) + "\n" +
+                getString(R.string.krem2_desc2) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem2_desc3), getString(R.string.priprema), getString(R.string._1_tijesto) +"\n"
+                + getString(R.string.krem2_desc4) + "\n" + getString(R.string._2_tijesto) + "\n" +
+                getString(R.string.krem2_desc5) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.kem2_desc6), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem3_desc1) + "\n" + getString(R.string.preljev_za_biskvit) + "\n" +
+                getString(R.string.krem3_desc2) + "\n" + getString(R.string.grans) + "\n" +
+                getString(R.string.kre3_desc3) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem3_desc4), getString(R.string.priprema), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem3_desc5) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem3_desc6) + "\n" + getString(R.string.grans) + "\n" +
+                getString(R.string.krem3_desc7) + "\n" +
+                getString(R.string.postupak) + "\n" + getString(R.string.krem3_desc8), R.drawable.background_tockice_tirk ));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem4_desc1) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem4_desc2) , getString(R.string.priprema), getString(R.string.krem4_desc3), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sastojci_za_4_kore) +"\n"
+                + getString(R.string.krem5_desc1) + "\n" + getString(R.string.glazura) + "\n" +
+                getString(R.string.krem5_desc2) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem5_desc3), getString(R.string.priprema), getString(R.string.krem5_desc4), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem6_desc1) + "\n" + getString(R.string.nadjev) + "\n" +
+                getString(R.string.krem6_desc2), getString(R.string.priprema), getString(R.string.krem6_desc3), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.krema) +"\n"
+                + getString(R.string.krem8_desc1) + "\n" + getString(R.string.biskvit) + "\n" +
+                getString(R.string.krem8_desc2) , getString(R.string.priprema), getString(R.string.krem8_desc3), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem9_desc1) + "\n" + getString(R.string.nadjev) + "\n" +
+                getString(R.string.krem9_desc2) + "\n" + getString(R.string.glazura) + "\n" +
+                getString(R.string.krem9_desc3), getString(R.string.priprema), getString(R.string.krem9_desc4), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem10_desc1) + "\n" + getString(R.string.glazura) + "\n" +
+                getString(R.string.krem10_desc2) + "\n" + getString(R.string.zuta_krema) + "\n" +
+                getString(R.string.krem10_desc3) + "\n" + getString(R.string.bijela_krema) + "\n" +
+                getString(R.string.krem10_desc4), getString(R.string.priprema), getString(R.string.krem10_desc5), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.krem11_desc1),
+                getString(R.string.priprema), getString(R.string.krem11_desc2), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.krem12_desc1) +
+                "\n" + getString(R.string.biskvit) + "\n" +
+                getString(R.string.krem12_desc2) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem12_desc3), getString(R.string.priprema), getString(R.string.krem12_desc4), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.ukrasavanje) +"\n"
+                + getString(R.string.krem13_desc1) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem13_desc2) + "\n" + getString(R.string.biskvit) + "\n" +
+                getString(R.string.krem13_desc3), getString(R.string.priprema), getString(R.string.krem13_desc4), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem14_desc1) + "\n" + getString(R.string.preljev_za_biskvit) + "\n" +
+                getString(R.string.krem14_desc2) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem14_desc3), getString(R.string.priprema), getString(R.string.krem14_desc4), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.biskvit), getString(R.string.krem15_desc1),
+                getString(R.string.glazura), getString(R.string.krem15_desc2), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem16_desc1) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem16_desc2) , getString(R.string.priprema), getString(R.string.krem16_desc3), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem17_desc1) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem17_desc2) , getString(R.string.priprema), getString(R.string.krem17_desc3), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem18_desc1) + "\n" + getString(R.string.fila) + "\n" +
+                getString(R.string.krem18_desc2) , getString(R.string.priprema), getString(R.string.krem18_desc3), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem19_desc1) + "\n" + getString(R.string.fila) + "\n" +
+                getString(R.string.krem19_desc2) , getString(R.string.priprema), getString(R.string.krem19_desc3), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem20_desc1) + "\n" + getString(R.string.fila_mak) + "\n" +
+                getString(R.string.krem20_desc2) + "\n" + getString(R.string.fila_kokos) + "\n" +
+                getString(R.string.krem20_desc3), getString(R.string.priprema), getString(R.string.krem20_desc4), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.krem21_desc1) + "\n" +
+                getString(R.string.preljev_za_biskvit) + "\n" +
+                getString(R.string.krem21_desc2) , getString(R.string.priprema), getString(R.string.krem21_desc3), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem22_desc1) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem22_desc2) + "\n" + getString(R.string.medusloj) + "\n" +
+                getString(R.string.krem22_desc3) + "\n" + getString(R.string.glazura) + "\n" +
+                getString(R.string.krem22_desc4), getString(R.string.priprema),getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem22_desc5) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem22_desc6) + "\n" + getString(R.string.medusloj) + "\n" +
+                getString(R.string.krem22_desc7) + "\n" + getString(R.string.glazura) + "\n" +
+                getString(R.string.krem22_desc8) + "\n" + getString(R.string.slaganje) + "\n" +
+                getString(R.string.krem22_desc9), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string._1_dio) +"\n"
+                + getString(R.string.krem23_desc1) + "\n" + getString(R.string._2_dio) + "\n" +
+                getString(R.string.krem23_desc2) + "\n" + getString(R.string._3_dio) + "\n" +
+                getString(R.string.krem23_desc3), getString(R.string.priprema), getString(R.string._1_dio) +"\n"
+                + getString(R.string.krem23_desc4) + "\n" + getString(R.string._2_dio) + "\n" +
+                getString(R.string.krem23_desc5) + "\n" + getString(R.string._3_dio) + "\n" +
+                getString(R.string.krem23_desc6), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.beze) +"\n"
+                + getString(R.string.krem24_desc1) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem24_desc2) , getString(R.string.priprema),getString(R.string.beze) +"\n"
+                + getString(R.string.krem24_desc3) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem24_desc4) + "\n" + getString(R.string.ukrasavanje) + "\n" +
+                getString(R.string.krem24_desc5), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem25_desc1) + "\n" + getString(R.string._1_krema) + "\n" +
+                getString(R.string.krem25_desc2) + "\n" + getString(R.string._2_krema) + "\n" +
+                getString(R.string.krem25_desc3), getString(R.string.priprema), getString(R.string.krem25_desc4), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem26_desc1) + "\n" + getString(R.string.fila) + "\n" +
+                getString(R.string.krem26_desc2) , getString(R.string.priprema), getString(R.string.krem26_desc3), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem27_desc1) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem27_desc2) , getString(R.string.priprema),getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem27_desc3) + "\n" + getString(R.string.krema) + "\n" +
+                getString(R.string.krem27_desc4), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.krem28_desc1) ,
+                getString(R.string.priprema), getString(R.string.krem28_desc2), R.drawable.background_tockice_tirk));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.biskvit) +"\n"
+                + getString(R.string.krem29_desc1) + "\n" + getString(R.string.fila) + "\n" +
+                getString(R.string.krem29_desc2) + "\n" + getString(R.string.glazura) + "\n" +
+                getString(R.string.krem29_desc3), getString(R.string.priprema), getString(R.string.krem29_desc4), R.drawable.background_tockice_tirk));
+
+
+
+
         toolbar = kremastiFragment.findViewById(R.id.action_bar_krem);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         tvTitle = kremastiFragment.findViewById(R.id.tvTitleKrem);
-        tvKrem1 = kremastiFragment.findViewById(R.id.tvKremasti1);
-        tvKrem2 = kremastiFragment.findViewById(R.id.tvKremasti2);
-        tvKrem3 = kremastiFragment.findViewById(R.id.tvKremasti3);
-        tvKrem4 = kremastiFragment.findViewById(R.id.tvKremasti4);
-        tvKrem5 = kremastiFragment.findViewById(R.id.tvKremasti5);
-        tvKrem6 = kremastiFragment.findViewById(R.id.tvKremasti6);
-        tvKrem8 = kremastiFragment.findViewById(R.id.tvKremasti8);
-        tvKrem9 = kremastiFragment.findViewById(R.id.tvKremasti9);
-        tvKrem10 = kremastiFragment.findViewById(R.id.tvKremasti10);
-        tvKrem11 = kremastiFragment.findViewById(R.id.tvKremasti11);
-        tvKrem12 = kremastiFragment.findViewById(R.id.tvKremasti12);
-        tvKrem13 = kremastiFragment.findViewById(R.id.tvKremasti13);
-        tvKrem14 = kremastiFragment.findViewById(R.id.tvKremasti14);
-        tvKrem15 = kremastiFragment.findViewById(R.id.tvKremasti15);
-        tvKrem16 = kremastiFragment.findViewById(R.id.tvKremasti16);
-        tvKrem17 = kremastiFragment.findViewById(R.id.tvKremasti17);
-        tvKrem18 = kremastiFragment.findViewById(R.id.tvKremasti18);
-        tvKrem19 = kremastiFragment.findViewById(R.id.tvKremasti19);
-        tvKrem20 = kremastiFragment.findViewById(R.id.tvKremasti20);
-        tvKrem21 = kremastiFragment.findViewById(R.id.tvKremasti21);
-        tvKrem22 = kremastiFragment.findViewById(R.id.tvKremasti22);
-        tvKrem23 = kremastiFragment.findViewById(R.id.tvKremasti23);
-        tvKrem24 = kremastiFragment.findViewById(R.id.tvKremasti24);
-        tvKrem25 = kremastiFragment.findViewById(R.id.tvKremasti25);
-        tvKrem26 = kremastiFragment.findViewById(R.id.tvKremasti26);
-        tvKrem27 = kremastiFragment.findViewById(R.id.tvKremasti27);
-        tvKrem28 = kremastiFragment.findViewById(R.id.tvKremasti28);
-        tvKrem29 = kremastiFragment.findViewById(R.id.tvKremasti29);
-
-        Typeface title = Typeface.createFromAsset(getActivity().getAssets(), "fonts/CandyRoundBTN-4.ttf");
-        tvTitle.setTypeface(title);
-        tvKrem1.setTypeface(title);
-        tvKrem2.setTypeface(title);
-        tvKrem3.setTypeface(title);
-        tvKrem4.setTypeface(title);
-        tvKrem5.setTypeface(title);
-        tvKrem6.setTypeface(title);
-        tvKrem8.setTypeface(title);
-        tvKrem9.setTypeface(title);
-        tvKrem10.setTypeface(title);
-        tvKrem11.setTypeface(title);
-        tvKrem12.setTypeface(title);
-        tvKrem13.setTypeface(title);
-        tvKrem14.setTypeface(title);
-        tvKrem15.setTypeface(title);
-        tvKrem16.setTypeface(title);
-        tvKrem17.setTypeface(title);
-        tvKrem18.setTypeface(title);
-        tvKrem19.setTypeface(title);
-        tvKrem20.setTypeface(title);
-        tvKrem21.setTypeface(title);
-        tvKrem22.setTypeface(title);
-        tvKrem23.setTypeface(title);
-        tvKrem24.setTypeface(title);
-        tvKrem25.setTypeface(title);
-        tvKrem26.setTypeface(title);
-        tvKrem27.setTypeface(title);
-        tvKrem28.setTypeface(title);
-        tvKrem29.setTypeface(title);
-
-
-
-        cvKrem1 = kremastiFragment.findViewById(R.id.cvKremasti1);
-        cvKrem2 = kremastiFragment.findViewById(R.id.cvKremasti2);
-        cvKrem3 = kremastiFragment.findViewById(R.id.cvKremasti3);
-        cvKrem4 = kremastiFragment.findViewById(R.id.cvKremasti4);
-        cvKrem5 = kremastiFragment.findViewById(R.id.cvKremasti5);
-        cvKrem6 = kremastiFragment.findViewById(R.id.cvKremasti6);
-        cvKrem8 = kremastiFragment.findViewById(R.id.cvKremasti8);
-        cvKrem9 = kremastiFragment.findViewById(R.id.cvKremasti9);
-        cvKrem10 = kremastiFragment.findViewById(R.id.cvKremasti10);
-        cvKrem11 = kremastiFragment.findViewById(R.id.cvKremasti11);
-        cvKrem12 = kremastiFragment.findViewById(R.id.cvKremasti12);
-        cvKrem13 = kremastiFragment.findViewById(R.id.cvKremasti13);
-        cvKrem14 = kremastiFragment.findViewById(R.id.cvKremasti14);
-        cvKrem15 = kremastiFragment.findViewById(R.id.cvKremasti15);
-        cvKrem16 = kremastiFragment.findViewById(R.id.cvKremasti16);
-        cvKrem17 = kremastiFragment.findViewById(R.id.cvKremasti17);
-        cvKrem18 = kremastiFragment.findViewById(R.id.cvKremasti18);
-        cvKrem19 = kremastiFragment.findViewById(R.id.cvKremasti19);
-        cvKrem20 = kremastiFragment.findViewById(R.id.cvKremasti20);
-        cvKrem21 = kremastiFragment.findViewById(R.id.cvKremasti21);
-        cvKrem22 = kremastiFragment.findViewById(R.id.cvKremasti22);
-        cvKrem23 = kremastiFragment.findViewById(R.id.cvKremasti23);
-        cvKrem24 = kremastiFragment.findViewById(R.id.cvKremasti24);
-        cvKrem25 = kremastiFragment.findViewById(R.id.cvKremasti25);
-        cvKrem26 = kremastiFragment.findViewById(R.id.cvKremasti26);
-        cvKrem27 = kremastiFragment.findViewById(R.id.cvKremasti27);
-        cvKrem28 = kremastiFragment.findViewById(R.id.cvKremasti28);
-        cvKrem29 = kremastiFragment.findViewById(R.id.cvKremasti29);
-
-        cvKrem1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem1Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem2Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem3Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem4Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem5Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem6Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-
-        cvKrem8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem8Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem9Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem10Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem11Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem12.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem12Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem13.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem13Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem14.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem14Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem15.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem15Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem16.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem16Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem17.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem17Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem18.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem18Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem19.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem19Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem20.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem20Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem21.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem21Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem22.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem22Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem23.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem23Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem24.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem24Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem25.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem25Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem26.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem26Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem27.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem27Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem28.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem28Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvKrem29.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Krem29Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-
-
-
         back = kremastiFragment.findViewById(R.id.back);
+
+        Typeface title = Typeface.createFromAsset(kremastiFragment.getContext().getAssets(), "fonts/CandyRoundBTN-4.ttf");
+        tvTitle.setTypeface(title);
+
+        recyclerView = kremastiFragment.findViewById(R.id.rvKremasti);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(getContext());
+        adapter = new ItemAdapter(kremastiList, this);
+
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+
+
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -462,4 +233,26 @@ public class KremastiFragment extends Fragment {
         return kremastiFragment;
     }
 
+    @Override
+    public void onItemClick(int adapterPosition, String title, int imageResource) {
+        Log.d(TAG, "onItemClick: clicked");
+        ItemKremastiFragment itemDetailFragment = new ItemKremastiFragment();
+        ItemDetails itemDetails = this.detailList.get(adapterPosition);
+
+        Bundle bundle = new Bundle();
+        bundle.putString("TITLE_KEY", title);
+        bundle.putInt("IMAGE_KEY", imageResource);
+        bundle.putString("TITLE_1", itemDetails.getTitle1());
+        bundle.putString("DESC_1", itemDetails.getDesc1());
+        bundle.putString("TITLE_2", itemDetails.getTitle2());
+        bundle.putString("DESC_2", itemDetails.getDesc2());
+        bundle.putInt("BACKGROUND_KEY", itemDetails.getBackground());
+        itemDetailFragment.setArguments(bundle);
+
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, itemDetailFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+
+    }
 }

@@ -258,7 +258,7 @@ public class ProfileFragment extends Fragment {
             } else if (preferences.getString("boja", "0").equals("4")) {
                 getActivity().getWindow().getDecorView().setBackgroundResource(R.drawable.background_tockice_tirk);
             } else if (preferences.getString("boja", "0").equals("5")) {
-                getActivity().getWindow().getDecorView().setBackgroundResource(R.drawable.background_tockice_narand);
+                getActivity().getWindow().getDecorView().setBackgroundResource(R.drawable.background_tockice_plave);
             } else if (preferences.getString("boja", "0").equals("6")) {
                 getActivity().getWindow().getDecorView().setBackgroundResource(R.drawable.background_tockice_crvene);
             }

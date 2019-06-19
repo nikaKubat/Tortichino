@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,46 +15,26 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import hr.algebra.tortichino.sitni.Sitni10Fragment;
-import hr.algebra.tortichino.sitni.Sitni11Fragment;
-import hr.algebra.tortichino.sitni.Sitni12Fragment;
-import hr.algebra.tortichino.sitni.Sitni13Fragment;
-import hr.algebra.tortichino.sitni.Sitni14Fragment;
-import hr.algebra.tortichino.sitni.Sitni15Fragment;
-import hr.algebra.tortichino.sitni.Sitni16Fragment;
-import hr.algebra.tortichino.sitni.Sitni17Fragment;
-import hr.algebra.tortichino.sitni.Sitni18Fragment;
-import hr.algebra.tortichino.sitni.Sitni19Fragment;
-import hr.algebra.tortichino.sitni.Sitni1Fragment;
-import hr.algebra.tortichino.sitni.Sitni20Fragment;
-import hr.algebra.tortichino.sitni.Sitni21Fragment;
-import hr.algebra.tortichino.sitni.Sitni22Fragment;
-import hr.algebra.tortichino.sitni.Sitni23Fragment;
-import hr.algebra.tortichino.sitni.Sitni24Fragment;
-import hr.algebra.tortichino.sitni.Sitni25Fragment;
-import hr.algebra.tortichino.sitni.Sitni2Fragment;
-import hr.algebra.tortichino.sitni.Sitni3Fragment;
-import hr.algebra.tortichino.sitni.Sitni4Fragment;
-import hr.algebra.tortichino.sitni.Sitni5Fragment;
-import hr.algebra.tortichino.sitni.Sitni6Fragment;
-import hr.algebra.tortichino.sitni.Sitni7Fragment;
-import hr.algebra.tortichino.sitni.Sitni8Fragment;
-import hr.algebra.tortichino.sitni.Sitni9Fragment;
+import java.util.ArrayList;
+
+import hr.algebra.tortichino.kremasti.ItemAdapter;
+import hr.algebra.tortichino.kremasti.ItemDetails;
+import hr.algebra.tortichino.kremasti.ItemKremastiFragment;
+import hr.algebra.tortichino.kremasti.ItemModel;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SitniFragment extends Fragment {
+public class SitniFragment extends Fragment implements ItemAdapter.OnItemListener {
 
     private Toolbar toolbar;
-    private TextView tvTitle, tvSitni1, tvSitni2, tvSitni3, tvSitni4, tvSitni5, tvSitni6, tvSitni7, tvSitni8, tvSitni9;
-    private TextView tvSitni10, tvSitni11, tvSitni12, tvSitni13, tvSitni14, tvSitni15, tvSitni16, tvSitni17, tvSitni18, tvSitni19;
-    private TextView tvSitni20, tvSitni21, tvSitni22, tvSitni23, tvSitni24, tvSitni25;
-    private CardView cvSitni1, cvSitni2, cvSitni3, cvSitni4, cvSitni5, cvSitni6, cvSitni7, cvSitni8, cvSitni9;
-    private CardView cvSitni10, cvSitni11, cvSitni12, cvSitni13, cvSitni14, cvSitni15, cvSitni16, cvSitni17, cvSitni18, cvSitni19;
-    private CardView cvSitni20, cvSitni21, cvSitni22, cvSitni23, cvSitni24, cvSitni25;
+    private TextView tvTitle;
     private ImageView back;
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private ArrayList<ItemDetails> detailList;
 
     public SitniFragment() {
         // Required empty public constructor
@@ -66,91 +47,104 @@ public class SitniFragment extends Fragment {
         // Inflate the layout for this fragment
         View sitniFrag = inflater.inflate(R.layout.fragment_sitni, container, false);
 
+        ArrayList<ItemModel> sitniList = new ArrayList<>();
+        sitniList.add(new ItemModel(R.drawable.sitni1, getString(R.string.sitni1)));
+        sitniList.add(new ItemModel(R.drawable.sitni2, getString(R.string.sitni2)));
+        sitniList.add(new ItemModel(R.drawable.sitni3, getString(R.string.sitni3)));
+        sitniList.add(new ItemModel(R.drawable.sitni4, getString(R.string.sitni4)));
+        sitniList.add(new ItemModel(R.drawable.sitni5, getString(R.string.sitni5)));
+        sitniList.add(new ItemModel(R.drawable.sitni6, getString(R.string.sitni6)));
+        sitniList.add(new ItemModel(R.drawable.sitni7, getString(R.string.sitni7)));
+        sitniList.add(new ItemModel(R.drawable.sitni8, getString(R.string.sitni8)));
+        sitniList.add(new ItemModel(R.drawable.sitni9, getString(R.string.sitni9)));
+        sitniList.add(new ItemModel(R.drawable.sitni10, getString(R.string.sitni10)));
+        sitniList.add(new ItemModel(R.drawable.sitni11, getString(R.string.sitni11)));
+        sitniList.add(new ItemModel(R.drawable.sitni12, getString(R.string.sitni12)));
+        sitniList.add(new ItemModel(R.drawable.sitni13, getString(R.string.sitni13)));
+        sitniList.add(new ItemModel(R.drawable.sitni14, getString(R.string.sitni14)));
+        sitniList.add(new ItemModel(R.drawable.sitni15, getString(R.string.sitni15)));
+        sitniList.add(new ItemModel(R.drawable.sitni16, getString(R.string.sitni16)));
+        sitniList.add(new ItemModel(R.drawable.sitni17, getString(R.string.sitni17)));
+        sitniList.add(new ItemModel(R.drawable.sitni18, getString(R.string.sitni18)));
+        sitniList.add(new ItemModel(R.drawable.sitni19, getString(R.string.sitni19)));
+        sitniList.add(new ItemModel(R.drawable.sitni20, getString(R.string.sitni20)));
+        sitniList.add(new ItemModel(R.drawable.sitni21, getString(R.string.sitni21)));
+        sitniList.add(new ItemModel(R.drawable.sitni22, getString(R.string.sitni22)));
+        sitniList.add(new ItemModel(R.drawable.sitni23, getString(R.string.sitni23)));
+        sitniList.add(new ItemModel(R.drawable.sitni24, getString(R.string.sitni24)));
+        sitniList.add(new ItemModel(R.drawable.sitni25, getString(R.string.sitni25)));
+
+        detailList = new ArrayList<>();
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni1_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni1_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni2_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni2_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni3_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni3_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni4_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni4_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni5_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni5_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni6_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni6_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni7_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni7_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni8_desc2) ,
+                getString(R.string.priprema), getString(R.string.sitni8_desc1), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni9_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni9_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.tijesto) + "\n" +
+                getString(R.string.sitni10_desc1) + "\n" + getString(R.string.fila) + "\n" +
+                getString(R.string.sitni10_desc2) + "\n" + getString(R.string.preljev) + "\n" +
+                getString(R.string.sitni10_desc3) , getString(R.string.priprema), getString(R.string.sitni10_desc4), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni11_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni11_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni12_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni12_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni13_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni13_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni14_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni14_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni15_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni15_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.tijesto), getString(R.string.sitni16_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni16_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni17_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni17_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni18_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni18_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni19_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni19_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.tijesto) + "\n" +
+                getString(R.string.sitni20_desc1) + "\n" + getString(R.string.secerni_sirup) + "\n" +
+                getString(R.string.sitni20_desc2) , getString(R.string.priprema), getString(R.string.sitni20_desc3), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni21_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni21_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni22_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni22_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni23_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni23_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni24_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni24_desc2), R.drawable.background_tockice_roze));
+        detailList.add(new ItemDetails(getString(R.string.sastojci), getString(R.string.sitni25_desc1) ,
+                getString(R.string.priprema), getString(R.string.sitni25_desc2), R.drawable.background_tockice_roze));
+
+
+
+
         tvTitle = sitniFrag.findViewById(R.id.tvTitleSitni);
         toolbar = sitniFrag.findViewById(R.id.action_bar_sitni);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
-        tvSitni1 = sitniFrag.findViewById(R.id.tvSitni1);
-        tvSitni2 = sitniFrag.findViewById(R.id.tvSitni2);
-        tvSitni3 = sitniFrag.findViewById(R.id.tvSitni3);
-        tvSitni4 = sitniFrag.findViewById(R.id.tvSitni4);
-        tvSitni5 = sitniFrag.findViewById(R.id.tvSitni5);
-        tvSitni6 = sitniFrag.findViewById(R.id.tvSitni6);
-        tvSitni7 = sitniFrag.findViewById(R.id.tvSitni7);
-        tvSitni8 = sitniFrag.findViewById(R.id.tvSitni8);
-        tvSitni9 = sitniFrag.findViewById(R.id.tvSitni9);
-        tvSitni10 = sitniFrag.findViewById(R.id.tvSitni10);
-        tvSitni11 = sitniFrag.findViewById(R.id.tvSitni11);
-        tvSitni12 = sitniFrag.findViewById(R.id.tvSitni12);
-        tvSitni13 = sitniFrag.findViewById(R.id.tvSitni13);
-        tvSitni14 = sitniFrag.findViewById(R.id.tvSitni14);
-        tvSitni15 = sitniFrag.findViewById(R.id.tvSitni15);
-        tvSitni16 = sitniFrag.findViewById(R.id.tvSitni16);
-        tvSitni17 = sitniFrag.findViewById(R.id.tvSitni17);
-        tvSitni18 = sitniFrag.findViewById(R.id.tvSitni18);
-        tvSitni19 = sitniFrag.findViewById(R.id.tvSitni19);
-        tvSitni20 = sitniFrag.findViewById(R.id.tvSitni20);
-        tvSitni21 = sitniFrag.findViewById(R.id.tvSitni21);
-        tvSitni22 = sitniFrag.findViewById(R.id.tvSitni22);
-        tvSitni23 = sitniFrag.findViewById(R.id.tvSitni23);
-        tvSitni24 = sitniFrag.findViewById(R.id.tvSitni24);
-        tvSitni25 = sitniFrag.findViewById(R.id.tvSitni25);
 
-        cvSitni1 = sitniFrag.findViewById(R.id.cvSitni1);
-        cvSitni2 = sitniFrag.findViewById(R.id.cvSitni2);
-        cvSitni3 = sitniFrag.findViewById(R.id.cvSitni3);
-        cvSitni4 = sitniFrag.findViewById(R.id.cvSitni4);
-        cvSitni5 = sitniFrag.findViewById(R.id.cvSitni5);
-        cvSitni6 = sitniFrag.findViewById(R.id.cvSitni6);
-        cvSitni7 = sitniFrag.findViewById(R.id.cvSitni7);
-        cvSitni8 = sitniFrag.findViewById(R.id.cvSitni8);
-        cvSitni9 = sitniFrag.findViewById(R.id.cvSitni9);
-        cvSitni10 = sitniFrag.findViewById(R.id.cvSitni10);
-        cvSitni11 = sitniFrag.findViewById(R.id.cvSitni11);
-        cvSitni12 = sitniFrag.findViewById(R.id.cvSitni12);
-        cvSitni13 = sitniFrag.findViewById(R.id.cvSitni13);
-        cvSitni14 = sitniFrag.findViewById(R.id.cvSitni14);
-        cvSitni15 = sitniFrag.findViewById(R.id.cvSitni15);
-        cvSitni16 = sitniFrag.findViewById(R.id.cvSitni16);
-        cvSitni17 = sitniFrag.findViewById(R.id.cvSitni17);
-        cvSitni18 = sitniFrag.findViewById(R.id.cvSitni18);
-        cvSitni19 = sitniFrag.findViewById(R.id.cvSitni19);
-        cvSitni20 = sitniFrag.findViewById(R.id.cvSitni20);
-        cvSitni21 = sitniFrag.findViewById(R.id.cvSitni21);
-        cvSitni22 = sitniFrag.findViewById(R.id.cvSitni22);
-        cvSitni23 = sitniFrag.findViewById(R.id.cvSitni23);
-        cvSitni24 = sitniFrag.findViewById(R.id.cvSitni24);
-        cvSitni25 = sitniFrag.findViewById(R.id.cvSitni25);
-
-
+        recyclerView = sitniFrag.findViewById(R.id.rvSitni);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(getContext());
+        adapter = new ItemAdapter(sitniList, this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
 
         final Typeface title = Typeface.createFromAsset(getActivity().getAssets(), "fonts/CandyRoundBTN-4.ttf");
         tvTitle.setTypeface(title);
-        tvSitni1.setTypeface(title);
-        tvSitni2.setTypeface(title);
-        tvSitni3.setTypeface(title);
-        tvSitni4.setTypeface(title);
-        tvSitni5.setTypeface(title);
-        tvSitni6.setTypeface(title);
-        tvSitni7.setTypeface(title);
-        tvSitni8.setTypeface(title);
-        tvSitni9.setTypeface(title);
-        tvSitni10.setTypeface(title);
-        tvSitni11.setTypeface(title);
-        tvSitni12.setTypeface(title);
-        tvSitni13.setTypeface(title);
-        tvSitni14.setTypeface(title);
-        tvSitni15.setTypeface(title);
-        tvSitni16.setTypeface(title);
-        tvSitni17.setTypeface(title);
-        tvSitni18.setTypeface(title);
-        tvSitni19.setTypeface(title);
-        tvSitni20.setTypeface(title);
-        tvSitni21.setTypeface(title);
-        tvSitni22.setTypeface(title);
-        tvSitni23.setTypeface(title);
-        tvSitni24.setTypeface(title);
-        tvSitni25.setTypeface(title);
-
 
         back = sitniFrag.findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
@@ -163,259 +157,28 @@ public class SitniFragment extends Fragment {
             }
         });
 
-        cvSitni1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni1Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni2Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni3Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni4Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni5Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni6Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni7Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni8Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni9Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni10Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni11Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni12.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni12Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni13.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni13Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni14.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni14Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni15.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni15Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni16.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni16Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni17.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni17Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni18.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni18Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni19.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni19Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni20.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni20Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni21.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni21Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni22.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni22Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni23.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni23Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni24.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni24Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        cvSitni25.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, new Sitni25Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-
 
         return sitniFrag;
     }
 
+    @Override
+    public void onItemClick(int adapterPosition, String title, int image) {
+        ItemKremastiFragment itemDetailFragment = new ItemKremastiFragment();
+        ItemDetails itemDetails = this.detailList.get(adapterPosition);
+
+        Bundle bundle = new Bundle();
+        bundle.putString("TITLE_KEY", title);
+        bundle.putInt("IMAGE_KEY", image);
+        bundle.putString("TITLE_1", itemDetails.getTitle1());
+        bundle.putString("DESC_1", itemDetails.getDesc1());
+        bundle.putString("TITLE_2", itemDetails.getTitle2());
+        bundle.putString("DESC_2", itemDetails.getDesc2());
+        bundle.putInt("BACKGROUND_KEY", itemDetails.getBackground());
+        itemDetailFragment.setArguments(bundle);
+
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, itemDetailFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
 }
